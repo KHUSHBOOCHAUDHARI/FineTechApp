@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_layout"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="@dimen/_200sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            app:cardBackgroundColor="@color/black_backgroundcolor"
+            app:cardCornerRadius="@dimen/_20sdp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="@dimen/_200sdp"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/earphoneone"
+                    android:visibility="visible"></ImageView>
+
+                <RelativeLayout
+
+                    android:layout_width="@dimen/_200sdp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/shadobackshop"
+                    android:visibility="gone"></RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true">
+
+                    <TextView
+                        android:id="@+id/discount_pre"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerHorizontal="true"
+
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:shadowColor="@color/black"
+                        android:shadowDx="-5"
+                        android:shadowDy="5"
+                        android:shadowRadius="5"
+                        android:text="15%"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSelectHandleLeft="@color/black"
+                        android:textSize="@dimen/_20sdp"></TextView>
+
+                    <TextView
+                        android:layout_alignParentEnd="true"
+                        android:id="@+id/discount_pre_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/_35sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:shadowColor="@color/black"
+                        android:shadowDx="-5"
+                        android:shadowDy="5"
+                        android:shadowRadius="5"
+                        android:text="ON DIRECT BUY"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_5sdp"></TextView>
+                    <TextView
+                        android:id="@+id/newdiscount_pre"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_below="@+id/discount_pre_title"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:shadowColor="@color/black"
+                        android:shadowDx="-5"
+                        android:shadowDy="5"
+                        android:shadowRadius="5"
+                        android:text="15%"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSelectHandleLeft="@color/black"
+                        android:textSize="@dimen/_24sdp"></TextView>
+
+                    <TextView
+                        android:id="@+id/new_discount_pre_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/discount_pre_title"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/_30sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:shadowColor="@color/black"
+                        android:shadowDx="-5"
+                        android:shadowDy="5"
+                        android:shadowRadius="5"
+                        android:text="ON DIRECT BUY"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_6sdp"></TextView>
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:visibility="visible"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    android:orientation="horizontal"
+                    >
+                    <soup.neumorphism.NeumorphCardView
+
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:id="@+id/careate_goal_card"
+
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/last_txt"
+                        app:neumorph_shadowColorDark="@color/transparent"
+                        app:neumorph_shadowElevation="@dimen/_2sdp"
+                        app:neumorph_shadowColorLight="#80000000"
+                        app:neumorph_shapeType="flat"
+                        app:neumorph_backgroundColor="@color/black_backgroundcolor"
+                        app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+                        style="@style/Widget.Neumorph.CardView"
+                        >
+
+
+
+
+                        <TextView
+
+                            android:id="@+id/creat_goal_txt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:layout_centerVertical="true"
+                            android:paddingTop="@dimen/_4sdp"
+                            android:paddingBottom="@dimen/_4sdp"
+                            android:layout_toEndOf="@+id/logo"
+                            android:background="@color/transparent"
+                            android:fontFamily="@font/poppins_medium"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:layout_marginRight="@dimen/_5sdp"
+                            android:text="@string/create_goal_txt"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_8sdp" />
+
+
+
+
+                    </soup.neumorphism.NeumorphCardView>
+                    <soup.neumorphism.NeumorphCardView
+
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:id="@+id/buy_now_card"
+
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/last_txt"
+                        app:neumorph_shadowColorDark="@color/transparent"
+                        app:neumorph_shadowElevation="@dimen/_2sdp"
+                        app:neumorph_shadowColorLight="#80000000"
+                        app:neumorph_shapeType="flat"
+                        app:neumorph_backgroundColor="@color/black_backgroundcolor"
+                        app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+                        style="@style/Widget.Neumorph.CardView"
+                        >
+
+
+
+
+                        <TextView
+
+                            android:id="@+id/cbut_now_txt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:layout_marginRight="@dimen/_5sdp"
+                            android:paddingTop="@dimen/_4sdp"
+                            android:paddingBottom="@dimen/_4sdp"
+                            android:layout_toEndOf="@+id/logo"
+                            android:background="@color/transparent"
+                            android:fontFamily="@font/poppins_medium"
+
+                            android:text="@string/buy_now_txt"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_8sdp" />
+
+
+
+
+                    </soup.neumorphism.NeumorphCardView>
+                </LinearLayout>
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/card_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Apple Watch Series 7"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12sdp"
+            android:visibility="visible"></TextView>
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Apple Watch Series 7"
+            android:textColor="@color/txt_color"
+            android:textSize="@dimen/_10sdp"
+            android:visibility="visible"></TextView>
+
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:id="@+id/layout"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/sub_layout"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_corna_shop"
+
+        android:backgroundTint="@color/light_black_backgroundcolor"
+        >
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="@dimen/_5sdp"
+            android:fontFamily="@font/poppins_medium"
+            android:paddingLeft="@dimen/_10sdp"
+            android:paddingRight="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_5sdp"
+
+            android:text="Gadget"
+            android:textColor="#5E5E5E"
+            android:textSize="@dimen/_8sdp">
+
+        </TextView>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

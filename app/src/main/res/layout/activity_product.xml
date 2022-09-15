@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_backgroundcolor"
+    tools:context=".Activity.ProductActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/toolbarlyt"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp">
+
+            <ImageView
+                android:id="@+id/back_image"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_55sdp"
+                android:layout_alignParentStart="true"
+
+                android:padding="@dimen/_12sdp"
+                android:src="@drawable/back"
+                app:tint="#6C6C6C"></ImageView>
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@color/transparent"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Apple"
+
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sdp"
+                android:visibility="gone">
+
+            </TextView>
+
+            <ImageView
+                android:id="@+id/beg_image"
+                android:layout_width="@dimen/_18sdp"
+                android:layout_height="@dimen/_18sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/_13sdp"
+                android:src="@drawable/shope_search"
+                android:visibility="visible"
+                app:tint="#6C6C6C"></ImageView>
+        </RelativeLayout>
+
+        <TextView
+
+            android:id="@+id/title"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbarlyt"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Best  Sellers"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_30sdp"></TextView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recy"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/title">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
