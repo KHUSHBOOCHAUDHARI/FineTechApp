@@ -18,14 +18,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:paddingTop="@dimen/_5sdp"
             android:fontFamily="@font/poppins_medium"
             android:paddingLeft="@dimen/_10sdp"
+            android:paddingTop="@dimen/_5sdp"
             android:paddingRight="@dimen/_10sdp"
             android:paddingBottom="@dimen/_5sdp"
 
             android:text="Gadget"
-            android:textColor="#5E5E5E"
+            android:textColor="@color/txtxt"
             android:textSize="@dimen/_8sdp">
 
         </TextView>

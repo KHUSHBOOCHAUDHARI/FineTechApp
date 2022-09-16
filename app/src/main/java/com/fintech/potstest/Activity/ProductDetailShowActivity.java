@@ -1,5 +1,6 @@
 package com.fintech.potstest.Activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -24,6 +25,14 @@ public class ProductDetailShowActivity extends AppCompatActivity {
             public void onClick(View view) {
                 onBackPressed();
                 overridePendingTransition(R.anim.right_out, R.anim.left_enter);
+            }
+        });
+        binding.buyNowBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(getApplicationContext(),ProductActivity.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.right_enter,R.anim.left_out);
             }
         });
 

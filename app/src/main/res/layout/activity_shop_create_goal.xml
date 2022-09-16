@@ -10,10 +10,51 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+        <RelativeLayout
 
+            android:id="@+id/toolbarlyt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp">
+
+            <ImageView
+                android:id="@+id/back_image"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_55sdp"
+                android:layout_alignParentStart="true"
+
+                android:padding="@dimen/_15sdp"
+                android:src="@drawable/back"
+                app:tint="#6C6C6C"></ImageView>
+
+
+            <TextView
+                android:id="@+id/txt_createpot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@color/transparent"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Create Goal"
+                android:textColor="#979797"
+                android:textSize="@dimen/_14sdp">
+
+            </TextView>
+
+            <ImageView
+                android:id="@+id/beg_image"
+                android:layout_width="@dimen/_20sdp"
+                android:padding="@dimen/_2sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:src="@drawable/shope_shope"
+                app:tint="#6C6C6C"></ImageView>
+        </RelativeLayout>
         <androidx.core.widget.NestedScrollView
 
-
+            android:layout_below="@+id/toolbarlyt"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -21,47 +62,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <RelativeLayout
 
-                    android:id="@+id/toolbarlyt"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_20sdp">
-
-                    <ImageView
-                        android:id="@+id/back_image"
-                        android:layout_width="@dimen/_50sdp"
-                        android:layout_height="@dimen/_55sdp"
-                        android:layout_alignParentStart="true"
-
-                        android:padding="@dimen/_12sdp"
-                        android:src="@drawable/back"
-                        app:tint="#6C6C6C"></ImageView>
-
-
-                    <TextView
-                        android:id="@+id/txt_createpot"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerInParent="true"
-                        android:background="@color/transparent"
-                        android:fontFamily="@font/poppins_medium"
-                        android:text="@string/create_your_pot_txt"
-                        android:textColor="#979797"
-                        android:textSize="@dimen/_14sdp">
-
-                    </TextView>
-
-                    <ImageView
-                        android:layout_centerVertical="true"
-                        android:id="@+id/beg_image"
-                        android:layout_width="@dimen/_20sdp"
-                        android:layout_height="@dimen/_20sdp"
-                        android:layout_alignParentEnd="true"
-                        android:layout_marginRight="@dimen/_10sdp"
-                        android:src="@drawable/shope_shope"
-                        app:tint="#6C6C6C"></ImageView>
-                </RelativeLayout>
 
                 <RelativeLayout
                     android:id="@+id/product_image_layout"
@@ -69,7 +70,7 @@
                     android:layout_height="@dimen/_300sdp"
                     android:padding="@dimen/_10sdp"
                     android:background="@drawable/squar_border"
-                    android:layout_below="@+id/toolbarlyt">
+                  >
 
                     <ImageView
                         android:id="@+id/product_image"
@@ -79,681 +80,674 @@
                         android:src="@drawable/watchone"></ImageView>
                 </RelativeLayout>
 
-                <soup.neumorphism.NeumorphCardView
-                    android:id="@+id/create_now_btn"
-                    style="@style/Widget.Neumorph.CardView"
+                <RelativeLayout
                     android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:layout_below="@+id/product_image_layout"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    app:neumorph_backgroundColor="@color/black_backgroundcolor"
-                    app:neumorph_shadowColorDark="#80000000"
-                    app:neumorph_shadowColorLight="#1A747474"
-                    app:neumorph_shadowElevation="1dp"
+                    android:background="@drawable/top_two_corna"
+                    android:backgroundTint="#111111">
 
-                    app:neumorph_shapeType="flat">
-                    <RelativeLayout
+                    <TextView
+                        android:id="@+id/name"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_toStartOf="@+id/count_layout"
+                        android:fontFamily="@font/poppins_medium"
+                        android:singleLine="true"
+                        android:text="SONY 200mm Zoom "
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_16sdp"></TextView>
 
-                        android:background="@drawable/top_two_corna"
+                    <TextView
+                        android:id="@+id/price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
 
-                        android:backgroundTint="#111111">
+                        android:layout_below="@+id/name"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:singleLine="true"
+                        android:text="6000"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_18sdp"></TextView>
 
-                        <TextView
-                            android:id="@+id/name"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="@dimen/_10sdp"
-                            android:layout_marginTop="@dimen/_10sdp"
-                            android:layout_toStartOf="@+id/count_layout"
-                            android:fontFamily="@font/poppins_medium"
-                            android:singleLine="true"
-                            android:text="SONY 200mm Zoom "
-                            android:textColor="@color/white"
-                            android:textSize="@dimen/_16sdp"></TextView>
 
-                        <TextView
-                            android:id="@+id/price"
+                    <LinearLayout
+                        android:id="@+id/count_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:id="@+id/plush_layout"
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="@dimen/_10sdp"
+
+
+                            android:layout_toStartOf="@+id/txt_layout"
+                            android:background="@drawable/btn_round_shop">
+
+                            <ImageView
+                                android:id="@+id/plusg"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:padding="@dimen/_5sdp"
+
+                                android:src="@drawable/plush_shop"></ImageView>
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/txt_layout"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="@dimen/_10sdp"
 
-                            android:layout_below="@+id/name"
+                            android:layout_toStartOf="@id/minush_layout">
+
+                            <TextView
+                                android:id="@+id/item_count"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:fontFamily="@font/poppins_bold"
+                                android:text="01"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_13sdp">
+
+                            </TextView>
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/minush_layout"
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:background="@drawable/btn_round_shop">
+
+                            <ImageView
+                                android:id="@+id/minush"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerInParent="true"
+
+                                android:padding="@dimen/_5sdp"
+                                android:src="@drawable/minush"></ImageView>
+
+
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/deaily_deposit_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/price"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+
+                        >
+
+                        <TextView
+                            android:id="@+id/deposit_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
                             android:layout_marginLeft="@dimen/_10sdp"
-                            android:fontFamily="@font/poppins_bold"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="center"
                             android:singleLine="true"
-                            android:text="6000"
+                            android:text="Daily deposit"
+                            android:textAlignment="center"
                             android:textColor="@color/white"
-                            android:textSize="@dimen/_18sdp"></TextView>
+                            android:textSize="@dimen/_8sdp"></TextView>
 
-
-                        <LinearLayout
-                            android:id="@+id/count_layout"
+                        <TextView
+                            android:id="@+id/daily_amount"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
-                            android:layout_marginTop="@dimen/_10sdp"
-                            android:orientation="horizontal">
-
-                            <RelativeLayout
-                                android:id="@+id/plush_layout"
-                                android:layout_width="@dimen/_20sdp"
-                                android:layout_height="@dimen/_20sdp"
-                                android:layout_centerHorizontal="true"
-                                android:layout_centerVertical="true"
-                                android:layout_gravity="center"
-                                android:layout_marginRight="@dimen/_10sdp"
-
-
-                                android:layout_toStartOf="@+id/txt_layout"
-                                android:background="@drawable/btn_round_shop">
-
-                                <ImageView
-                                    android:id="@+id/plusg"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_centerHorizontal="true"
-                                    android:layout_centerVertical="true"
-                                    android:padding="@dimen/_5sdp"
-
-                                    android:src="@drawable/plush_shop"></ImageView>
-
-
-                            </RelativeLayout>
-
-                            <RelativeLayout
-                                android:id="@+id/txt_layout"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_centerVertical="true"
-                                android:layout_gravity="center"
-                                android:layout_marginRight="@dimen/_10sdp"
-
-                                android:layout_toStartOf="@id/minush_layout">
-
-                                <TextView
-                                    android:id="@+id/item_count"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_centerInParent="true"
-                                    android:fontFamily="@font/poppins_bold"
-                                    android:text="01"
-                                    android:textColor="@color/white"
-                                    android:textSize="@dimen/_13sdp">
-
-                                </TextView>
-
-
-                            </RelativeLayout>
-
-                            <RelativeLayout
-                                android:id="@+id/minush_layout"
-                                android:layout_width="@dimen/_20sdp"
-                                android:layout_height="@dimen/_20sdp"
-                                android:layout_centerVertical="true"
-                                android:layout_gravity="center"
-                                android:layout_marginRight="@dimen/_10sdp"
-                                android:background="@drawable/btn_round_shop">
-
-                                <ImageView
-                                    android:id="@+id/minush"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_alignParentEnd="true"
-                                    android:layout_centerInParent="true"
-
-                                    android:padding="@dimen/_5sdp"
-                                    android:src="@drawable/minush"></ImageView>
-
-
-                            </RelativeLayout>
-                        </LinearLayout>
-
-                        <RelativeLayout
-                            android:id="@+id/deaily_deposit_layout"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@+id/price"
+                            android:layout_centerVertical="true"
                             android:layout_marginLeft="@dimen/_10sdp"
-                            android:layout_marginRight="@dimen/_10sdp"
-
-                            >
-
-                            <TextView
-                                android:id="@+id/deposit_txt"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_alignParentStart="true"
-                                android:layout_marginLeft="@dimen/_10sdp"
-                                android:fontFamily="@font/poppins_medium"
-                                android:gravity="center"
-                                android:singleLine="true"
-                                android:text="Daily deposit"
-                                android:textAlignment="center"
-                                android:textColor="@color/white"
-                                android:textSize="@dimen/_8sdp"></TextView>
-
-                            <TextView
-                                android:id="@+id/daily_amount"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_alignParentEnd="true"
-                                android:layout_centerVertical="true"
-                                android:layout_marginLeft="@dimen/_10sdp"
-                                android:fontFamily="@font/poppins_medium"
-                                android:gravity="center"
-                                android:singleLine="true"
-                                android:text="00"
-                                android:textAlignment="center"
-                                android:textColor="@color/white"
-                                android:textSize="@dimen/_10sdp"></TextView>
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:text="00"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_10sdp"></TextView>
 
 
-                        </RelativeLayout>
+                    </RelativeLayout>
 
-                        <SeekBar
-                            android:id="@+id/daily_seekBar"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/deaily_deposit_layout"
-                            android:layout_marginTop="@dimen/_5sdp"
-                            android:maxWidth="@dimen/_10sdp"
-                            android:maxHeight="@dimen/_10sdp"
+                    <SeekBar
+                        android:id="@+id/daily_seekBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/deaily_deposit_layout"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:maxWidth="@dimen/_10sdp"
+                        android:maxHeight="@dimen/_10sdp"
 
-                            android:progressDrawable="@drawable/custom_progress_bar_horizontal"
-                            android:thumb="@drawable/shop_thumb"
-                            android:thumbTint="@color/white"
-                            android:visibility="visible" />
+                        android:progressDrawable="@drawable/custom_progress_bar_horizontal"
+                        android:thumb="@drawable/shop_thumb"
+                        android:thumbTint="@color/white"
+                        android:visibility="visible" />
+
+                    <TextView
+
+                        android:id="@+id/daily_sub_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/daily_seekBar"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="center"
+
+                        android:singleLine="true"
+                        android:text="You can choose upto 50,000"
+                        android:textAlignment="center"
+                        android:textColor="#555555"
+                        android:textSize="@dimen/_6sdp" />
+
+                    <RelativeLayout
+                        android:id="@+id/monthly_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/daily_seekBar"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+
+                        >
 
                         <TextView
-
-                            android:id="@+id/daily_sub_txt"
+                            android:id="@+id/monthly_txt"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@+id/daily_seekBar"
                             android:layout_alignParentStart="true"
                             android:layout_centerVertical="true"
                             android:layout_marginLeft="@dimen/_10sdp"
-                            android:layout_marginTop="@dimen/_3sdp"
                             android:fontFamily="@font/poppins_medium"
                             android:gravity="center"
-
                             android:singleLine="true"
-                            android:text="You can choose upto 50,000"
+                            android:text="Daily deposit"
                             android:textAlignment="center"
-                            android:textColor="#555555"
-                            android:textSize="@dimen/_6sdp" />
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_8sdp"
+                            android:visibility="gone"></TextView>
 
-                        <RelativeLayout
-                            android:id="@+id/monthly_layout"
-                            android:layout_width="match_parent"
+                        <TextView
+                            android:id="@+id/month_count"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@+id/daily_seekBar"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
                             android:layout_marginLeft="@dimen/_10sdp"
-                            android:layout_marginTop="@dimen/_10sdp"
-                            android:layout_marginRight="@dimen/_10sdp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="center"
+                            android:singleLine="true"
 
-                            >
-
-                            <TextView
-                                android:id="@+id/monthly_txt"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_alignParentStart="true"
-                                android:layout_centerVertical="true"
-                                android:layout_marginLeft="@dimen/_10sdp"
-                                android:fontFamily="@font/poppins_medium"
-                                android:gravity="center"
-                                android:singleLine="true"
-                                android:text="Daily deposit"
-                                android:textAlignment="center"
-                                android:textColor="@color/white"
-                                android:textSize="@dimen/_8sdp"
-                                android:visibility="gone"></TextView>
-
-                            <TextView
-                                android:id="@+id/month_count"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_alignParentEnd="true"
-                                android:layout_centerVertical="true"
-                                android:layout_marginLeft="@dimen/_10sdp"
-                                android:fontFamily="@font/poppins_medium"
-                                android:gravity="center"
-                                android:singleLine="true"
-
-                                android:textAlignment="center"
-                                android:textColor="@color/white"
-                                android:textSize="@dimen/_10sdp"></TextView>
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_10sdp"></TextView>
 
 
-                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <SeekBar
+                        android:id="@+id/monthly_seekBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/monthly_layout"
+                        android:layout_marginTop="@dimen/_5sdp"
+
+                        android:maxWidth="@dimen/_10sdp"
+                        android:maxHeight="@dimen/_10sdp"
+                        android:progressDrawable="@drawable/custom_progress_bar_horizontal"
+                        android:thumb="@drawable/shop_thumb"
+                        android:thumbTint="@color/white" />
+
+                    <TextView
+
+                        android:id="@+id/month_sub_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/monthly_seekBar"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="center"
+
+                        android:singleLine="true"
+                        android:text="You can choose upto 10 months"
+                        android:textAlignment="center"
+                        android:textColor="#555555"
+                        android:textSize="@dimen/_6sdp"></TextView>
+
+                    <ImageView
+                        android:id="@+id/graph"
+                        android:layout_width="@dimen/_200sdp"
+                        android:layout_height="@dimen/_100sdp"
+                        android:layout_below="@id/month_sub_txt"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:src="@drawable/shopcreate_postgraph"
+                        android:visibility="visible">
+
+                    </ImageView>
+
+                    <RelativeLayout
+                        android:id="@+id/graph_amount_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/graph"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:visibility="visible"
+
+                        >
+
+                        <TextView
+                            android:id="@+id/grapg_amout_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:text="Daily deposit"
+                            android:textAlignment="center"
+                            android:textColor="#646464"
+                            android:textSize="@dimen/_8sdp"></TextView>
+
+                        <TextView
+                            android:id="@+id/graph_amount_amount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:layout_toEndOf="@+id/grapg_amout_txt"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:text="10,000Rs"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_10sdp"></TextView>
+
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+
+                        android:id="@+id/ll_seekvalue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/graph_amount_layout"
+                        android:layout_marginLeft="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_20sdp">
+
+                        <TextView
+                            android:id="@+id/actual_seekvalue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="@string/txt_seekvalue"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_12sdp"></TextView>
+
+                        <TextView
+                            android:id="@+id/total_seekvalue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="@string/txt_totalseekvalue"
+                            android:textColor="@color/ligt_gray"
+                            android:textSize="@dimen/_12sdp"></TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_seekbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/ll_seekvalue"
+
+                        android:layout_marginTop="@dimen/_5sdp"
+
+                        android:orientation="vertical">
 
                         <SeekBar
-                            android:id="@+id/monthly_seekBar"
+                            android:id="@+id/seekBar"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_below="@id/monthly_layout"
                             android:layout_marginTop="@dimen/_5sdp"
-
                             android:maxWidth="@dimen/_10sdp"
                             android:maxHeight="@dimen/_10sdp"
-                            android:progressDrawable="@drawable/custom_progress_bar_horizontal"
+                            android:progress="5"
+                            android:progressDrawable="@drawable/custom_progresbar_new"
                             android:thumb="@drawable/shop_thumb"
-                            android:thumbTint="@color/white" />
+                            android:thumbTint="#555555" />
 
                         <TextView
-
-                            android:id="@+id/month_sub_txt"
+                            android:id="@+id/label_bottom"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@+id/monthly_seekBar"
-                            android:layout_alignParentStart="true"
-                            android:layout_centerVertical="true"
                             android:layout_marginLeft="@dimen/_10sdp"
                             android:layout_marginTop="@dimen/_3sdp"
-                            android:fontFamily="@font/poppins_medium"
-                            android:gravity="center"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="@string/txt_roundup"
+                            android:textColor="#EDA0A0A0"
+                            android:textSize="@dimen/_8sdp"></TextView>
 
-                            android:singleLine="true"
-                            android:text="You can choose upto 10 months"
-                            android:textAlignment="center"
-                            android:textColor="#555555"
-                            android:textSize="@dimen/_6sdp"></TextView>
+                    </LinearLayout>
 
-                        <ImageView
-                            android:id="@+id/graph"
-                            android:layout_width="@dimen/_200sdp"
-                            android:layout_height="@dimen/_100sdp"
-                            android:layout_below="@id/month_sub_txt"
-                            android:layout_centerHorizontal="true"
-                            android:layout_marginTop="@dimen/_10sdp"
-                            android:src="@drawable/shopcreate_postgraph"
-                            android:visibility="visible">
+                    <LinearLayout
+                        android:id="@+id/ll_gold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/ll_seekbar"
+                        android:layout_marginLeft="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_20sdp">
 
-                        </ImageView>
-
-                        <RelativeLayout
-                            android:id="@+id/graph_amount_layout"
+                        <TextView
+                            android:id="@+id/txt_gold"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@+id/graph"
-                            android:layout_centerHorizontal="true"
-                            android:layout_marginLeft="@dimen/_10sdp"
-                            android:layout_marginTop="@dimen/_10sdp"
-                            android:layout_marginRight="@dimen/_10sdp"
-                            android:visibility="visible"
-
-                            >
-
-                            <TextView
-                                android:id="@+id/grapg_amout_txt"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_centerVertical="true"
-                                android:layout_marginLeft="@dimen/_10sdp"
-                                android:fontFamily="@font/poppins_medium"
-                                android:gravity="center"
-                                android:singleLine="true"
-                                android:text="Daily deposit"
-                                android:textAlignment="center"
-                                android:textColor="#646464"
-                                android:textSize="@dimen/_8sdp"></TextView>
-
-                            <TextView
-                                android:id="@+id/graph_amount_amount"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_centerVertical="true"
-
-                                android:layout_marginLeft="@dimen/_5sdp"
-                                android:layout_toEndOf="@+id/grapg_amout_txt"
-                                android:fontFamily="@font/poppins_semibold"
-                                android:gravity="center"
-                                android:singleLine="true"
-                                android:text="10,000Rs"
-                                android:textAlignment="center"
-                                android:textColor="@color/white"
-                                android:textSize="@dimen/_10sdp"></TextView>
-
-
-                        </RelativeLayout>
-
-                        <LinearLayout
-
-                            android:id="@+id/ll_seekvalue"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@+id/graph_amount_layout"
-                            android:layout_marginLeft="@dimen/_20sdp"
-                            android:layout_marginTop="@dimen/_10sdp"
-                            android:layout_marginRight="@dimen/_20sdp">
-
-                            <TextView
-                                android:id="@+id/actual_seekvalue"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/poppins_medium"
-                                android:text="@string/txt_seekvalue"
-                                android:textColor="@color/white"
-                                android:textSize="@dimen/_12sdp"></TextView>
-
-                            <TextView
-                                android:id="@+id/total_seekvalue"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/poppins_medium"
-                                android:text="@string/txt_totalseekvalue"
-                                android:textColor="@color/ligt_gray"
-                                android:textSize="@dimen/_12sdp"></TextView>
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:id="@+id/ll_seekbar"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@+id/ll_seekvalue"
-
-                            android:layout_marginTop="@dimen/_5sdp"
-
-                            android:orientation="vertical">
-
-                            <SeekBar
-                                android:id="@+id/seekBar"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_below="@id/monthly_layout"
-                                android:layout_marginTop="@dimen/_5sdp"
-                                android:maxWidth="@dimen/_10sdp"
-                                android:maxHeight="@dimen/_10sdp"
-                                android:progress="5"
-                                android:progressDrawable="@drawable/custom_progresbar_new"
-                                android:thumb="@drawable/shop_thumb"
-                                android:thumbTint="#555555" />
-
-                            <TextView
-                                android:id="@+id/label_bottom"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="@dimen/_10sdp"
-                                android:layout_marginTop="@dimen/_3sdp"
-                                android:layout_marginRight="@dimen/_10sdp"
-                                android:fontFamily="@font/poppins_regular"
-                                android:text="@string/txt_roundup"
-                                android:textColor="#EDA0A0A0"
-                                android:textSize="@dimen/_8sdp"></TextView>
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:id="@+id/ll_gold"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@+id/ll_seekbar"
-                            android:layout_marginLeft="@dimen/_20sdp"
-                            android:layout_marginTop="@dimen/_10sdp"
-                            android:layout_marginRight="@dimen/_20sdp">
-
-                            <TextView
-                                android:id="@+id/txt_gold"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:fontFamily="@font/poppins_medium"
-                                android:text="@string/gold_txt"
-                                android:textColor="@color/txt_color"
-                                android:textSize="@dimen/_12sdp"></TextView>
-
-                            <RelativeLayout
-                                android:id="@+id/kyc_txt"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:layout_marginLeft="@dimen/_10sdp"
-                                android:background="@drawable/shope_round_corna_min"
-                                android:backgroundTint="@color/txt_color">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center"
-
-                                    android:fontFamily="@font/poppins_medium"
-                                    android:gravity="center"
-                                    android:padding="6dp"
-                                    android:paddingTop="@dimen/_10sdp"
-                                    android:text="@string/nokyc_txt"
-                                    android:textColor="@color/green"
-                                    android:textSize="@dimen/_5sdp">
-
-                                </TextView>
-                            </RelativeLayout>
-
-                            <RelativeLayout
-
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_vertical"
-                                android:gravity="right">
-
-                                <com.suke.widget.SwitchButton
-                                    android:id="@+id/gold_switch"
-                                    android:layout_width="@dimen/_40sdp"
-                                    android:layout_height="@dimen/_25sdp"
-                                    app:sb_checked="true"
-                                    app:sb_checked_color="@color/green"
-                                    app:sb_show_indicator="false" />
-
-                            </RelativeLayout>
-
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:id="@+id/ll_recycleview"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@+id/ll_gold"
-                            android:visibility="visible">
-
-                            <androidx.recyclerview.widget.RecyclerView
-                                android:id="@+id/gold_recyclerview"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_below="@+id/search_layout"
-                                android:padding="10dp">
-
-                            </androidx.recyclerview.widget.RecyclerView>
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:id="@+id/ll_mutualfund"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@+id/ll_recycleview"
-                            android:layout_marginLeft="@dimen/_20sdp"
-                            android:layout_marginRight="@dimen/_20sdp">
-
-                            <TextView
-                                android:id="@+id/txt_mutualfund"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:fontFamily="@font/poppins_medium"
-                                android:text="@string/mutual_fund_txt"
-                                android:textColor="#555555"
-                                android:textSize="@dimen/_12sdp"></TextView>
-
-                            <RelativeLayout
-                                android:id="@+id/nokyc_txt"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:layout_marginLeft="@dimen/_10sdp"
-                                android:background="@drawable/shope_round_corna_min"
-                                android:backgroundTint="@color/txt_color">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center"
-
-                                    android:fontFamily="@font/poppins_medium"
-                                    android:gravity="center"
-                                    android:padding="6dp"
-                                    android:paddingTop="@dimen/_10sdp"
-                                    android:text="@string/kyc_txt"
-                                    android:textColor="#CF0000"
-                                    android:textSize="@dimen/_5sdp">
-
-                                </TextView>
-                            </RelativeLayout>
-
-                            <RelativeLayout
-
-                                android:id="@+id/btn_plus_mf"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:layout_marginLeft="@dimen/_10sdp"
-                                android:background="@drawable/circular"
-                                android:backgroundTint="@color/txt_color"
-                                app:neumorph_shapeType="flat">
-
-                                <ImageView
-                                    android:layout_width="@dimen/_20sdp"
-                                    android:layout_height="@dimen/_20sdp"
-                                    android:padding="@dimen/_5sdp"
-                                    android:src="@drawable/plush"
-                                    app:tint="@color/black"></ImageView>>
-                            </RelativeLayout>
-
-                            <RelativeLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_vertical"
-                                android:gravity="right">
-
-                                <com.suke.widget.SwitchButton
-                                    android:id="@+id/mf_switch"
-                                    android:layout_width="@dimen/_40sdp"
-                                    android:layout_height="@dimen/_25sdp"
-                                    app:sb_checked_color="@color/green"
-                                    app:sb_show_indicator="false" />
-
-                            </RelativeLayout>
-
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:id="@+id/ll_recycleview_two"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@+id/ll_mutualfund">
-
-                            <androidx.recyclerview.widget.RecyclerView
-                                android:id="@+id/mf_recyclerview"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_below="@+id/search_layout"
-                                android:padding="10dp"
-                                android:visibility="visible">
-
-                            </androidx.recyclerview.widget.RecyclerView>
-                        </LinearLayout>
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="@string/gold_txt"
+                            android:textColor="@color/txt_color"
+                            android:textSize="@dimen/_12sdp"></TextView>
 
                         <RelativeLayout
-                            android:id="@+id/nc_boostmf"
+                            android:id="@+id/kyc_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:background="@drawable/shope_round_corna_min"
+                            android:backgroundTint="@color/txt_color">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+
+                                android:fontFamily="@font/poppins_medium"
+                                android:gravity="center"
+                                android:padding="6dp"
+                                android:paddingTop="@dimen/_10sdp"
+                                android:text="@string/nokyc_txt"
+                                android:textColor="@color/green"
+                                android:textSize="@dimen/_5sdp">
+
+                            </TextView>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_below="@+id/ll_recycleview_two"
-                            android:layout_marginLeft="@dimen/_10sdp"
-                            android:layout_marginRight="@dimen/_10sdp"
-                            android:layout_marginBottom="@dimen/_30sdp"
-                            android:background="@drawable/shope_round_corna_min"
-                            android:backgroundTint="@color/black"
-                            app:neumorph_shapeType="flat">
+                            android:layout_gravity="center_vertical"
+                            android:gravity="right">
 
-
-                            <RelativeLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content">
-
-                                <TextView
-                                    android:id="@+id/label_addmf"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_centerInParent="true"
-                                    android:layout_marginLeft="@dimen/_10sdp"
-                                    android:autofillHints=""
-                                    android:background="@color/transparent"
-                                    android:fontFamily="@font/poppins_medium"
-                                    android:paddingTop="9dp"
-                                    android:paddingBottom="9dp"
-                                    android:text="@string/boostmf_txt"
-                                    android:textAlignment="center"
-                                    android:textColor="@color/dark_gray"
-                                    android:textSize="@dimen/_12sdp" />
-                            </RelativeLayout>
-
+                            <com.suke.widget.SwitchButton
+                                android:id="@+id/gold_switch"
+                                android:layout_width="@dimen/_40sdp"
+                                android:layout_height="@dimen/_25sdp"
+                                app:sb_checked="true"
+                                app:sb_checked_color="@color/green"
+                                app:sb_show_indicator="false" />
 
                         </RelativeLayout>
 
-                        <soup.neumorphism.NeumorphCardView
-                            android:id="@+id/continue_btn"
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_recycleview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/ll_gold"
+                        android:visibility="visible">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/gold_recyclerview"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/search_layout"
+                            android:padding="10dp">
+
+                        </androidx.recyclerview.widget.RecyclerView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_mutualfund"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/ll_recycleview"
+                        android:layout_marginLeft="@dimen/_20sdp"
+                        android:layout_marginRight="@dimen/_20sdp">
+
+                        <TextView
+                            android:id="@+id/txt_mutualfund"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="@string/mutual_fund_txt"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/_12sdp"></TextView>
+
+                        <RelativeLayout
+                            android:id="@+id/nokyc_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:background="@drawable/shope_round_corna_min"
+                            android:backgroundTint="@color/txt_color">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+
+                                android:fontFamily="@font/poppins_medium"
+                                android:gravity="center"
+                                android:padding="6dp"
+                                android:paddingTop="@dimen/_10sdp"
+                                android:text="@string/kyc_txt"
+                                android:textColor="#CF0000"
+                                android:textSize="@dimen/_5sdp">
+
+                            </TextView>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+
+                            android:id="@+id/btn_plus_mf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:background="@drawable/circular"
+                            android:backgroundTint="@color/txt_color"
+                            app:neumorph_shapeType="flat">
+
+                            <ImageView
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:padding="@dimen/_5sdp"
+                                android:src="@drawable/plush"
+                                app:tint="@color/black"></ImageView>>
+                        </RelativeLayout>
+
+                        <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
-                            android:layout_marginLeft="@dimen/_10sdp"
-                            android:layout_marginRight="@dimen/_10sdp"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="right">
 
-                            android:layout_marginBottom="@dimen/_10sdp"
-                            android:layout_below="@+id/nc_boostmf"
-                            app:neumorph_backgroundColor="@color/black_backgroundcolor"
-                            app:neumorph_shadowColorDark="#80000000"
-                            app:neumorph_shadowColorLight="#1A747474"
-                           >
+                            <com.suke.widget.SwitchButton
+                                android:id="@+id/mf_switch"
+                                android:layout_width="@dimen/_40sdp"
+                                android:layout_height="@dimen/_25sdp"
+                                app:sb_checked_color="@color/green"
+                                app:sb_show_indicator="false" />
 
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_recycleview_two"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/ll_mutualfund">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/mf_recyclerview"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/search_layout"
+                            android:padding="10dp"
+                            android:visibility="visible">
+
+                        </androidx.recyclerview.widget.RecyclerView>
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/nc_boostmf"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/ll_recycleview_two"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_30sdp"
+                        android:background="@drawable/shope_round_corna_min"
+                        android:backgroundTint="@color/black"
+                        app:neumorph_shapeType="flat">
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/label_addmf"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_marginLeft="@dimen/_10sdp"
+                                android:autofillHints=""
+                                android:background="@color/transparent"
+                                android:fontFamily="@font/poppins_medium"
+                                android:paddingTop="9dp"
+                                android:paddingBottom="9dp"
+                                android:text="@string/boostmf_txt"
+                                android:textAlignment="center"
+                                android:textColor="@color/dark_gray"
+                                android:textSize="@dimen/_12sdp" />
+                        </RelativeLayout>
+
+
+                    </RelativeLayout>
+
+                    <soup.neumorphism.NeumorphCardView
+                        android:layout_below="@id/nc_boostmf"
+                        android:id="@+id/buy_now_btn"
+                        style="@style/Widget.Neumorph.CardView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        app:neumorph_backgroundColor="@color/black_backgroundcolor"
+                        app:neumorph_shadowColorDark="#80000000"
+                        app:neumorph_shadowColorLight="#1A747474"
+                        app:neumorph_shadowElevation="1dp"
+                        app:neumorph_shapeType="flat">
+
+                        <RelativeLayout
+
+                            android:layout_width="match_parent"
+
+                            android:layout_height="match_parent"
+                            android:background="@drawable/shope_round_corna_min"
+                            android:backgroundTint="#111111">
 
                             <RelativeLayout
-                                android:id="@+id/rl_continue"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content">
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true">
 
                                 <ImageView
-                                    android:id="@+id/logo"
                                     android:layout_width="@dimen/_30sdp"
+
                                     android:layout_height="@dimen/_30sdp"
-                                    android:layout_centerInParent="true"
-                                    android:padding="@dimen/_10sdp"
-                                    android:src="@drawable/ic_call"
+                                    android:layout_centerVertical="true"
+                                    android:padding="@dimen/_5sdp"
+                                    android:src="@drawable/login_btn"
                                     android:visibility="gone"></ImageView>
 
 
                                 <TextView
-                                    android:id="@+id/txt_continue"
+
+                                    android:id="@+id/sell_txt"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_centerInParent="true"
+
+                                    android:layout_centerVertical="true"
                                     android:layout_marginLeft="@dimen/_10sdp"
-                                    android:layout_toEndOf="@+id/logo"
-                                    android:autofillHints=""
+
                                     android:background="@color/transparent"
                                     android:fontFamily="@font/poppins_bold"
-                                    android:paddingTop="9dp"
-                                    android:paddingBottom="9dp"
-                                    android:text="@string/continue_txt"
+                                    android:paddingTop="10dp"
+                                    android:paddingBottom="10dp"
+                                    android:text="Create"
                                     android:textColor="@color/white"
-                                    android:textSize="@dimen/_12sdp" />
+                                    android:textSize="@dimen/_14sdp" />
                             </RelativeLayout>
+                        </RelativeLayout>
 
 
-                        </soup.neumorphism.NeumorphCardView>
-                    </RelativeLayout>
-                </soup.neumorphism.NeumorphCardView>
+                    </soup.neumorphism.NeumorphCardView>
 
-
+                </RelativeLayout>
             </RelativeLayout>
 
         </androidx.core.widget.NestedScrollView>

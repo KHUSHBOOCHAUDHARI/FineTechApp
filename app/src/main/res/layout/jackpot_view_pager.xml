@@ -1,0 +1,16 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+
+    >
+  <ImageView
+      android:scaleType="fitXY"
+      android:background="@drawable/reward_view_pager_image"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+  </ImageView>
+
+
+</RelativeLayout>

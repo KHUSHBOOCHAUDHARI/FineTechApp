@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.fintech.potstest.Model.ShopCategoryModel;
@@ -21,10 +22,12 @@ public class ShopCategoryAdapter extends RecyclerView.Adapter<ShopCategoryAdapte
     private List<ShopCategoryModel> listdata;
     private Activity activity;
     Method method;
-
+    private static int lastClickedPosition = -1;
+    private int selectedItem;
     public ShopCategoryAdapter(List<ShopCategoryModel> listdata, Activity activity) {
         this.listdata = listdata;
         this.activity = activity;
+        selectedItem = 0;
     }
 
     @Override
@@ -39,6 +42,23 @@ public class ShopCategoryAdapter extends RecyclerView.Adapter<ShopCategoryAdapte
         method=new Method(activity);
         holder.name.setText(listdata.get(position).getName());
         holder.imageView.setImageResource(listdata.get(position).getImage());
+        holder.imageView.setImageTintList(ContextCompat.getColorStateList(activity, R.color.txt_color_new));
+        holder.name.setTextColor((activity.getResources().getColor(R.color.txt_color_new)));
+        if (selectedItem == position) {
+            holder.imageView.setImageTintList(ContextCompat.getColorStateList(activity, R.color.white));
+            holder.name.setTextColor((activity.getResources().getColor(R.color.white)));
+        }
+
+        holder.layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int previousItem = selectedItem;
+                selectedItem = position;
+                notifyItemChanged(previousItem);
+                notifyItemChanged(position);
+
+            }
+        });
 
     }
 
