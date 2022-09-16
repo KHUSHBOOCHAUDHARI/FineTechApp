@@ -69,7 +69,7 @@ public class ShopMutualFundAdpater extends RecyclerView.Adapter<ShopMutualFundAd
         holder.title.setText(listdata.get(position).getTitle());
         holder.txt_ratingcounts.setText(listdata.get(position).getRatingcount());
         holder.txt_years.setText(listdata.get(position).getMf_years()+"Y");
-        Glide.with(activity).load(listdata.get(position).getImage()).into(holder.logo);
+       // Glide.with(activity).load(listdata.get(position).getImage()).into(holder.logo);
         holder.sub_title.setText(listdata.get(position).getSubtitle());
 
         if (MainActivity.IMAGE_SHOW_HIDE.equalsIgnoreCase("1"))

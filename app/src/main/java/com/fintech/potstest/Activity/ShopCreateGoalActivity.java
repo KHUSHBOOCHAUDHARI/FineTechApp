@@ -86,7 +86,7 @@ public class ShopCreateGoalActivity extends AppCompatActivity {
                if(i>=1) {
                    binding.dailyAmount.setText("" + i);
 
-                   int FinalPrice = Integer.parseInt(binding.price.getText().toString());
+                   int FinalPrice = Integer.parseInt(getIntent().getStringExtra("price"));
                    int DailyPrice = Integer.parseInt(binding.dailyAmount.getText().toString());
 
                    int Month = FinalPrice / DailyPrice;
@@ -187,7 +187,7 @@ public class ShopCreateGoalActivity extends AppCompatActivity {
     }
     private List<ListOfMfModel> getMutualFundData() {
         List<ListOfMfModel> mflist = new ArrayList<>();
-        mflist.add(new ListOfMfModel( String.valueOf(R.drawable.gold),"","Axis Bluechip","Hybrid","","","3Y","CAGR:6.25%","4"));
+        mflist.add(new ListOfMfModel( String.valueOf(R.drawable.axis),"","Axis Bluechip","Hybrid","","","3Y","CAGR:6.25%","4"));
         return mflist;
     }
 

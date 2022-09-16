@@ -20,10 +20,12 @@ public class ShopNewCategoryAdapter extends RecyclerView.Adapter<ShopNewCategory
     private List<ShopNameCategoryModel> listdata;
     private Activity activity;
     Method method;
-
+    private static int lastClickedPosition = -1;
+    private int selectedItem;
     public ShopNewCategoryAdapter(List<ShopNameCategoryModel> listdata, Activity activity) {
         this.listdata = listdata;
         this.activity = activity;
+        selectedItem=0;
     }
 
     @Override
@@ -37,7 +39,21 @@ public class ShopNewCategoryAdapter extends RecyclerView.Adapter<ShopNewCategory
     public void onBindViewHolder(ViewHolder holder, @SuppressLint("RecyclerView") int position) {
         method=new Method(activity);
         holder.name.setText(listdata.get(position).getName());
+        holder.name.setTextColor(activity.getResources().getColor(R.color.txtxt));
+        if (selectedItem==position)
+        {
+            holder.name.setTextColor(activity.getResources().getColor(R.color.white));
+        }
 
+        holder.layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int previousItem = selectedItem;
+                selectedItem = position;
+                notifyItemChanged(previousItem);
+                notifyItemChanged(position);
+            }
+        });
 
     }
 
